@@ -4,7 +4,7 @@
 The CCSS suffered a ransomware attack that compromised the Unique Digital Medical File (EDUS) and the National Prescriptions System for the public pharmacies. They've reported that their infrastructure has been compromised, and they cannot regain access. The APT left their implant interface exposed, though, and you'll need to break into it and find out how it works. NOTE: This challenge is intended to be solved before 'Breakin'.
 
 # Target
-![[Pasted image 20220718112414.png]]
+![GitHub Logo](../Images/breakout_host)
 
 ## Running Strings
 ![[Pasted image 20220718112512.png]]
