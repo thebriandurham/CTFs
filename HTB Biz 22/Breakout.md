@@ -63,7 +63,7 @@ Put it all together and we get the flag:
 
 # TLDR
 1. navigate to host & download `bkd` file
-2. `strings bkd | grep -nv '^_ZN*' 
+2. `strings bkd | grep -nv '^_ZN*'`
 3. scroll to find 'HTB'
 4. put the lines together
 
