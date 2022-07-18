@@ -5,7 +5,7 @@ The CCSS suffered a ransomware attack that compromised the Unique Digital Medica
 
 # Target
 
-Looking at the target's web server we get a listing of `/` on the compromised host. Looking over all of these directories, it would be easy to get lost poking around for clues. I did for a good few minutes, before I noticed the non-standard, not-even-a-directory file at the top level: 'bkd.'
+Looking at the target's web server we get a listing of `/` on the compromised host. Looking over all of these directories, it would be easy to get lost poking around for clues. I did for a good few minutes, before I noticed the non-standard, not-even-a-directory file at the top level: `bkd` (a real 'doh' moment for me).
 
 ![Target Host](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/breakout_host.png)
 
@@ -26,15 +26,16 @@ Running `strings bkd` results in a *massive* amount of strings, so let's see if 
 Yup! Sure does! 
 
 ### Carving the clutter
-Before: 
+
+**Before**
 
 Let's remove some of the clutter we see before scrolling thru the massive output. I saw a lot of lines starting with `_ZN` so I targeted that.
 
 ![Before Carving](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/breakout_carving_the_clutter.png)
 
-After & confirming flag hasn't been cut:
+**After**
 
-Look at how clean it is now! Oh, and the flag's still there which is good.
+Look at how clean it is now! Oh, and the flag's still there, which is good.
 
 ![After Carving](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/breakout_flag_check_2.png)
 
