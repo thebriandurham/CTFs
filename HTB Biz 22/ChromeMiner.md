@@ -7,28 +7,35 @@ Discurd has filed a DMCA violation regarding a popular browser extension claimin
 - DiscurdNitru.crx
 
 ## Unzipping the crx
-![[Pasted image 20220718105552.png]]
+
+![Unzip CRX](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/chromeminer_unzipping_crx.png)
 
 ## background.js - contents beautified
-![[Pasted image 20220718105714.png]]
-![[Pasted image 20220718105700.png]]
+
+![background.js contents](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/chromeminer_backgroundjs_contents.png)
+![Contents Beautified](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/chromeminer_js_beautified.png)
 
 ## background.js - getting to work
 
 ### protip 1 - ctrl shift m on parentheticals
-![[Pasted image 20220718105842.png]]
+
+![Protip 1](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/chromeminer_protip1.png)
 
 ### protip 2 - dedupe w/ ctrl d 
-![[Pasted image 20220718105959.png]]
+
+![Protip 2](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/chromeminer_protip2.png)
 
 ### protip 3 - firefox js console
-![[Pasted image 20220718110117.png]]
-![[Pasted image 20220718110213.png]]
+
+![Protip 3-1](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/chromeminer_protip3_1.png)
+![Protip 3-2](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/chromeminer_protip3_2.png)
 
 ### deobfu payload
-![[Pasted image 20220718112014.png]]
+
+![De-obfuscated Payload](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/chromeminer_deobfu_payload.png)
 
 ### AES Decode
-![[Pasted image 20220718112133.png]]
+
+![AES Decode](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/chromeminer_aes_decode.png)
 
 - Flag = `HTB{__mY_vRy_owN_CHR0me_M1N3R__}`
