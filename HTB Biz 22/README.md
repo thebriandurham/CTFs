@@ -2,9 +2,9 @@
 
 ## Completed Challenges
 
-- ![Breakout](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Breakout.md)
-- ![Chromeminer](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/ChromeMiner.md)
-- ![Lina's Invitation](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Lina's%20Invitation.md)
+- [Breakout](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Breakout.md)
+- [Chromeminer](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/ChromeMiner.md)
+- [Lina's Invitation](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Lina's%20Invitation.md)
 
 ## Closing Thoughts
 
