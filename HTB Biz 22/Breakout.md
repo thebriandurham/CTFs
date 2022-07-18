@@ -1,5 +1,15 @@
 # Breakout
 
+# TOC
+- [Prompt](#prompt)
+- [Target](#target)
+- [Running Strings](#running-strings)
+- [Check Flag Presence](#check-presence-of-flag)
+- [Carving the Clutter](#carving-the-clutter)
+- [Getting There](#getting-there)
+- [Flag](#flag)
+- [TLDR](#tldr)
+
 ## Prompt 
 The CCSS suffered a ransomware attack that compromised the Unique Digital Medical File (EDUS) and the National Prescriptions System for the public pharmacies. They've reported that their infrastructure has been compromised, and they cannot regain access. The APT left their implant interface exposed, though, and you'll need to break into it and find out how it works. NOTE: This challenge is intended to be solved before 'Breakin'.
 
@@ -17,7 +27,7 @@ When I get any kind of larger, pre-compiled file in a CTF, I like to visit good 
 
 ![Running Strings](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/breakout_running_strings.png)
 
-### Check presence of flag
+### Check Presence of Flag
 
 Running `strings bkd` results in a *massive* amount of strings, so let's see if it has anything immediately obvious, such as, say, the string 'HTB?' 
 
@@ -50,3 +60,9 @@ Now, simply scroll thru the output until we find the flag split over multiple li
 Put it all together and we get the flag:
 
 - flag = `HTB{th3_pr0c_f5_15_4_p53ud0_f1l35y5t3m_wh1ch_pr0v1d35_4n_1nt3rf4c3.....}`
+
+# TLDR
+1. navigate to host & download `bkd` file
+2. `strings bkd | grep -nv '^_ZN*' 
+3. scroll to find 'HTB'
+4. put the lines together
