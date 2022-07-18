@@ -5,28 +5,28 @@ The CCSS suffered a ransomware attack that compromised the Unique Digital Medica
 
 # Target
 
-![Test](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/breakout_host.png)
+![Target Host](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/breakout_host.png)
 
 ## Running Strings
 
-![Test](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/breakout_running_strings.png)
+![Running Strings](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/breakout_running_strings.png)
 
 ### Check presence of flag
 
-![Test](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/breakout_flag_check.png)
+![Flag Check](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/breakout_flag_check.png)
 
 ### Carving the clutter
 Before: 
 
-![Test](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/breakout_carving_the_clutter.png)
+![Before Carving](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/breakout_carving_the_clutter.png)
 
 After & confirming flag hasn't been cut:
 
-![Test](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/breakout_breakout_flag_check-2.png)
+![After Carving](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/breakout_flag_check_2.png)
 
 ## Getting there
 
-![Test](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/breakout_getting_there.png)
+![Getting There](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/breakout_getting_there.png)
 
 ## Flag
 - flag = `HTB{th3_pr0c_f5_15_4_p53ud0_f1l35y5t3m_wh1ch_pr0v1d35_4n_1nt3rf4c3.....}`
