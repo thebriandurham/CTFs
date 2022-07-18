@@ -2,4 +2,4 @@
  
 ## Contents:
 
-- Hack The Box - Business CTF 2022
+- ./HTB Biz 22: Hack The Box - Business CTF 2022
