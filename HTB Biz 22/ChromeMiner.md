@@ -1,12 +1,25 @@
 # Chromeminer
 
+# TOC
+- [Prompt](#prompt)
+- [Files](#files)
+- [Unzipping the crx](#unzipping-the-crx)
+- [backgroundjs Contents](#backgroundjs-contents)
+- [Getting To Work](#getting-to-work)
+- [Protip 1](#protip-1---parentheticals)
+- [Protip 2](#protip-2---dedupe)
+- [Protip 3](#protip-3---firefox-js-console)
+- [De-Obfuscated Payload](#de-obfuscated-payload)
+- [AES Decode](#aes-decode)
+- [TLDR](#tldr)
+
 ## Prompt
 Discurd has filed a DMCA violation regarding a popular browser extension claiming to be conducting VIP giveaways on the company's product. The addon store has since taken down the extension to prevent any potential browser cryptomining malware from being distributed in the marketplace. Could you investigate what the 'Discurd Nitro Giveaway' addon does exactly?
 
 ## Files
 - DiscurdNitru.crx
 
-## Unzipping the .crx
+## Unzipping the crx
 
 For this challenge, we're given a single file (see above). As stated in the prmopt, it's a browser extension. Some quick googling reveals you can unzip them, just like a `.zip` file. Who knew?! (Not me, this is my first time messing with chrome extensions, but now I have a hankering to rip apart all of the extensions I use in Firefox). 
 
@@ -14,7 +27,7 @@ Unzipping the CRX (*you wouldn't unzip a car?!* (+1 points for you if you get th
 
 ![Unzip CRX](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/chromeminer_unzipping_crx.png)
 
-## background.js - Contents
+## backgroundjs Contents
 
 Checking out background.js reveals a *massive* one-line, obfuscated js script.
 
@@ -26,11 +39,11 @@ Let's take that ugly duck and make it a swan with an online js beautifier:
 
 *Nice*.
 
-## background.js - Getting to Work
+## Getting to Work
 
 Now that we have the obfuscated js in a tolerable-to-look at format (well, almost tolerable), we can start picking it apart. Here's some protips I picked up from my days as a SOC Analyst...
 
-### Protip 1 - CTRL+SHIFT+M on Parentheticals
+### Protip 1 - Parentheticals
 
 In Sublime Text (you are using Sublime, *aren't* you?) you can move the caret to any parenthetical character (`(, ), [, ], {, }`) and press `CTRL + SHIFT + M` to highlight everything within it.
 
@@ -38,7 +51,7 @@ In Sublime Text (you are using Sublime, *aren't* you?) you can move the caret to
 
 Doing this is great, especially when we combine it with Protip 2:
 
-### Protip 2 - Dedupe w/ CTRL+D 
+### Protip 2 - Dedupe
 
 With the contents of a parenthetical highlighted, you can go ahead and press `CTRL + D` a bunch of times, until new instances of the highlighted content aren't found. If nothing is found, then there's only one instance, but that's okay. This is still going to save us a lot of time while de-obfuscating this script.
 
@@ -67,3 +80,11 @@ Throw that into cyberchef and we get our flag!
 ![AES Decode](https://github.com/thebriandurham/CTFs/blob/main/HTB%20Biz%2022/Images/chromeminer_aes_decode.png)
 
 - Flag = `HTB{__mY_vRy_owN_CHR0me_M1N3R__}`
+
+# TLDR
+1. `unzip DiscurdNitru.crx`
+2. beautify contents of background.js
+3. de-obfuscate using technique of choice
+4. decode ciphertext w/ params: `AES-CBC;IV="_NOT_THE_SECRET_";KEY=\_NOT_THE_SECRET_"`
+
+[Back to Top](#toc)
