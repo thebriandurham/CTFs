@@ -66,3 +66,5 @@ Put it all together and we get the flag:
 2. `strings bkd | grep -nv '^_ZN*' 
 3. scroll to find 'HTB'
 4. put the lines together
+
+[Back to Top](#toc)
